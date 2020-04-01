@@ -51,6 +51,8 @@ library(ggplot2)
 
 data(mpg)
 ggplot(mpg, aes(x = displ, y = hwy)) +
-        geom_point()
+  geom_point()+
+  theme_dark()
+
 
 # save the .RData under the file menu for next lecture
