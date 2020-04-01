@@ -49,6 +49,11 @@ plot(covid$country, covid$cases, las = 3, cex.axis = 0.5, xlab = "")
 # install.packages(ggplot2) it is already installed so no need for this
 library(ggplot2) 
 
+# If ggplot2 cannot be found by the software: install the devtools package and then install 
+# install.packages("devtools")
+# devtools::install_github("tidyverse/ggplot2")
+
+
 data(mpg)
 ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point()+
