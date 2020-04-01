@@ -33,3 +33,5 @@ pairs(meuse[,3:6], col="blue", pch=11, cex= 0.7)
 # GGally will prettify the current graph
 #library(GGally) usually done on the top of the script
 ggpairs(meuse[,3:6])
+# ?aes
+# ggpairs(meuse[,3:6],aes(colour='cut' ) ) + theme_dark() trying some aestetics
