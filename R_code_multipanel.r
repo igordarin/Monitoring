@@ -7,7 +7,7 @@ install.packages("GGally")
 library(sp) # require(sp) will also do the job
 library(GGally) 
 
-data(meuse) there is a dataset avaiable named meuse
+data(meuse) #there is a dataset avaiable named meuse
 
 attach(meuse)
 
@@ -18,7 +18,7 @@ names(meuse)
 head(meuse)
 plot(cadmium, zinc, pch= 15, col= "red")
 
-# exercise: make all the paiwis plots of the dataset
+# exercise: make all the plots of the dataset
 plot(x,cadmium)
 plot(x,zinc)
 plot...
