@@ -61,3 +61,23 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 
 
 # save the .RData under the file menu for next lecture
+
+# load the previously saved .Rdata
+# set working directory
+setwd("~/Sgn/Monitoring ecosystems changes and functioning/lab")
+load("spatial.RData")
+library(ggplot2)
+
+data(mpg)
+head(mpg)
+
+# key components: data. aestetics, geometry
+ggplot(mpg, aes(x=displ,y=hwy)) + geom_point()
+ggplot(mpg, aes(x=displ,y=hwy)) + geom_line()
+ggplot(mpg, aes(x=displ,y=hwy)) + geom_polygon()
+
+head(covid)
+
+ggplot(covid, aes(x=lon, y=lat, size=cases)) + geom_point()
+ggplot(covid, aes(x=lon, y=lat, size=cases)) + geom_point() + theme_dark() # always play with layers
+
