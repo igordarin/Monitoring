@@ -21,3 +21,34 @@ points(covids)
 # also excluding homonym functions in different packages
 # d
 # plot (d)
+
+#part 2
+# covids <- points
+# d <- density map
+
+library(spatstat)
+library(rgdal) 
+
+# let's imput the vector lines
+plot(d)
+points(covids)
+
+coastlines <- readOGR("ne_10m_coastline.shp")
+plot(coastlines, add=T) # add to previous plot
+coastlines <- readOGR("ne_10m_coastline.shp") 
+# directly download and import coastlines within R:
+# install.packages("rnaturalearth")
+# coastlines <- rnaturalearth::ne_download(scale = 10, type = 'coastline', category = 'physical')
+
+plot(coastlines, add=T)
+cl <- colorRampPalette(c('yellow','orange','red')) (100) # 100 is the number of colours for the palette
+plot(d, col=cl)
+
+# export
+pdf("covid_density.pdf")
+cl <- colorRampPalette(c( 'blue','lightgreen','yellow','orange','red','darkred')) (100)
+plot(d, col=cl, main="Densities of covid-19")
+points(covids)
+plot(coastlines, add=T)
+dev.off() 
+
