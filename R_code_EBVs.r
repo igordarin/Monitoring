@@ -18,7 +18,7 @@ plotRGB(snt, 3,2,1, stretch="lin")
 
 plotRGB(snt, 4,2,1, stretch="lin")
 
-##  pairs(snt)  it requires a lot of time and power so pay attention pairs(snt)
+##  pairs(snt)  it requires a lot of time with this poor little pc so pay attention pairs(snt)
 
 cl <- colorRampPalette(c("blue","green","orange","red")) (100)
 
