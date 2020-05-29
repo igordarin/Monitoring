@@ -76,9 +76,4 @@ par(mfrow=c(2,3))
 plot(snow.multitemp, col=cl)
 plot(predicted.snow.2025.norm, col=cl)
 
-### let's try
-par(mfrow=c(2,3))
-snow.multitemp <- c(snow.multitemp,predicted.snow.2025.norm)
-plot(snow.multitemp)
-
 
