@@ -67,3 +67,7 @@ plot(snow.multitemp, col=cl)
 
 #### prof's code on iol
 source("prediction.r")
+
+par(mfrow=c(1,1))
+plot(predicted.snow.2025, col=cl)
+plot(predicted.snow.2025.norm, col=cl)
