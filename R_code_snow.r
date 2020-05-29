@@ -71,3 +71,8 @@ source("prediction.r")
 par(mfrow=c(1,1))
 plot(predicted.snow.2025, col=cl)
 plot(predicted.snow.2025.norm, col=cl)
+
+par(mfrow=c(2,3))
+plot(snow.multitemp, col=cl)
+plot(predicted.snow.2025.norm, col=cl)
+
