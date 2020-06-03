@@ -76,4 +76,33 @@ par(mfrow=c(2,3))
 plot(snow.multitemp, col=cl)
 plot(predicted.snow.2025.norm, col=cl)
 
+######################
+###day 2
+setwd("~/Sgn/Monitoring ecosystems changes and functioning/lab/snow")
+
+#export the output
+writeRaster(predicted.snow.2025.norm,"final.tif")
+
+prediction <- raster("final.tif")
+# Exercise: plot all the images all toghether
+# at first i rewrited the objects adding snow2025r
+#rlist <- list.files(pattern = "snow20" )
+#import <- lapply(rlist,raster)
+#snow.multitemp <- stack(import)
+#snow.multitemp
+#plot(snow.multitemp, col=cl)
+#### better with a new stack
+
+######### final stack
+final.stack <- stack(snow.multitemp, prediction)
+
+#export pdf  Rgraph for the thesis!!
+pdf("my_final_exciting_graph.pdf")
+plot(final.stack, col=cl)
+dev.off()
+
+#png
+png("my_final_exciting_graph.png")
+plot(final.stack, col=cl)
+dev.off()
 
